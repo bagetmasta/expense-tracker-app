@@ -5,9 +5,7 @@ import { Outlet } from "react-router-dom";
 export default function AppBar() {
   return (
     <>
-      <header>
-        <h2>AppBar</h2>
-      </header>
+      <header>AppBar</header>
       <Suspense>
         <main>
           <Outlet />
