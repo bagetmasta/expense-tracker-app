@@ -10,8 +10,8 @@ function App() {
     <Routes>
       <Route path="/" element={<AppBar />}>
         <Route index element={<HomePage />} />
+        <Route path="/expenses" element={<ExpensesPage />} />
       </Route>
-      <Route path="/expenses" element={<ExpensesPage />} />
     </Routes>
   );
 }
