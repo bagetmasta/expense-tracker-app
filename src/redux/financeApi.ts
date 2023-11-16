@@ -6,6 +6,7 @@ import {
 type BalanceResponse = {
   totalBalance: number;
   currency: string;
+  cardNumber: number;
 };
 
 type AnalyticsResponse = {

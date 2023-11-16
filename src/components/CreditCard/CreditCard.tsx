@@ -67,7 +67,7 @@ export default function CreditCard() {
             fontSize={18}
             lineHeight="normal"
           >
-            2544 7545 3785 1023
+            {balance?.cardNumber}
           </Typography>
           <MasterCard />
         </Box>
