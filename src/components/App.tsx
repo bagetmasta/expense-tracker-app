@@ -1,9 +1,9 @@
-import React, { lazy } from "react";
+import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import AppBar from "./AppBar/AppBar.tsx";
+import AppBar from "./AppBar/AppBar";
 
-const HomePage = lazy(() => import("pages/HomePage.tsx"));
-const ExpensesPage = lazy(() => import("pages/ExpensesPage.tsx"));
+const HomePage = lazy(() => import("../pages/HomePage"));
+const ExpensesPage = lazy(() => import("../pages/ExpensesPage"));
 
 function App() {
   return (

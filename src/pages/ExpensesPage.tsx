@@ -1,7 +1,7 @@
-import Calendar from "components/Calendar/Calendar.tsx";
-import TotalBalance from "components/TotalBalance/TotalBalance.tsx";
-import Expences from "components/Expences/Expences.tsx";
-import React from "react";
+import Calendar from "../components/Calendar/Calendar";
+import TotalBalance from "../components/TotalBalance/TotalBalance";
+import Expenses from "../components/Expenses/Expenses";
+// import React from "react";
 
 export default function ExpensesPage() {
   return (
@@ -9,7 +9,7 @@ export default function ExpensesPage() {
       <h2>ExpensesPage</h2>
       <Calendar />
       <TotalBalance />
-      <Expences />
+      <Expenses />
     </>
   );
 }

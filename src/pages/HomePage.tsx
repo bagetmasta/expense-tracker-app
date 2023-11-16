@@ -1,6 +1,6 @@
-import Analytics from "components/Analytics/Analytics.tsx";
-import CreditCard from "components/CreditCard/CreditCard.tsx";
-import Transactions from "components/Transactions/Transactions.tsx";
+import Analytics from "../components/Analytics/Analytics";
+import CreditCard from "../components/CreditCard/CreditCard";
+import Transactions from "../components/Transactions/Transactions";
 import React from "react";
 // import Box from "@mui/material/Box";
 // import Fab from "@mui/material/Fab";
