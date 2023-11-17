@@ -52,6 +52,8 @@ export default function AppBar() {
                 justifyContent: "center",
                 overflow: "hidden",
                 borderRadius: "6px",
+                paddingLeft: "4px",
+                paddingRight: "4px",
               }}
             >
               <img
