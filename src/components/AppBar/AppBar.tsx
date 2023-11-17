@@ -54,6 +54,7 @@ export default function AppBar() {
                 borderRadius: "6px",
                 paddingLeft: "4px",
                 paddingRight: "4px",
+                paddingTop: "2px",
               }}
             >
               <img
