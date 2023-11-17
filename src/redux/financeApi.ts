@@ -21,6 +21,8 @@ type TransactionsResponse = Array<{
   currency: string;
   account: string;
   accountNumber: string;
+  id: number;
+  logoUrl: string;
 }>;
 
 export const financeApi = createApi({

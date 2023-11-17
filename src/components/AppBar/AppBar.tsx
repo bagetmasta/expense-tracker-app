@@ -5,10 +5,13 @@ import {
   Box,
   CircularProgress,
   Typography,
+  Container,
+  Toolbar,
 } from "@mui/material";
 import faceLogo from "../../images/account-face.png";
 import BeltAlert from "../../images/BeltAlert";
 import IconButton from "@mui/material/IconButton";
+import Footer from "../Footer/Footer";
 
 export default function AppBar() {
   const location = useLocation();
@@ -37,37 +40,41 @@ export default function AppBar() {
           bgcolor: "#fff",
         }}
       >
-        <Box
-          sx={{
-            width: 36,
-            height: 40,
-            bgcolor: "#9B63FC",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "hidden",
-            borderRadius: "6px",
-          }}
-        >
-          <img
-            src={faceLogo}
-            alt="Profile"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-        </Box>
-        <Typography
-          variant="h1"
-          sx={{ fontSize: "24px", fontWeight: 500, lineHeight: "normal" }}
-        >
-          {title}
-        </Typography>
-        <IconButton>
-          <BeltAlert />
-        </IconButton>
+        <Container>
+          <Toolbar sx={{ justifyContent: "space-evenly" }}>
+            <Box
+              sx={{
+                width: 36,
+                height: 40,
+                bgcolor: "#9B63FC",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                overflow: "hidden",
+                borderRadius: "6px",
+              }}
+            >
+              <img
+                src={faceLogo}
+                alt="Profile"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </Box>
+            <Typography
+              variant="h1"
+              sx={{ fontSize: "24px", fontWeight: 500, lineHeight: "normal" }}
+            >
+              {title}
+            </Typography>
+            <IconButton>
+              <BeltAlert />
+            </IconButton>
+          </Toolbar>
+        </Container>
       </MuiAppBar>
       <Suspense
         fallback={
@@ -76,10 +83,12 @@ export default function AppBar() {
           </Box>
         }
       >
-        <main>
-          <Outlet />
-        </main>
-        <footer>Footer</footer>
+        <Container maxWidth="sm">
+          <main>
+            <Outlet />
+          </main>
+        </Container>
+        <Footer />
       </Suspense>
     </>
   );
