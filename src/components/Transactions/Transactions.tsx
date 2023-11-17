@@ -1,5 +1,5 @@
 import { useGetTransactionsQuery } from "../../redux/financeApi";
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import OneTransaction from "../OneTransaction/OneTransaction";
 import { Transaction } from "../../types/transaction";
 
@@ -12,18 +12,34 @@ export default function Transactions() {
 
   return (
     <>
-      <Typography
-        variant="h2"
+      <Box
         sx={{
-          fontSize: "24px",
-          fontWeight: 500,
-          lineHeight: "normal",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
           mb: "24px",
         }}
       >
-        Transactions
-      </Typography>
-      <ul>
+        <Typography
+          variant="h2"
+          sx={{
+            fontSize: "24px",
+            fontWeight: 500,
+            lineHeight: "normal",
+          }}
+        >
+          Transactions
+        </Typography>
+        <Typography
+          sx={{ color: "#A3A3A3", fontSize: "12px", lineHeight: "normal" }}
+        >
+          View All
+        </Typography>
+      </Box>
+      <Box
+        component="ul"
+        sx={{ listStyle: "none", padding: 0, marginBottom: "80px" }}
+      >
         {transactions?.map(
           ({ id, name, amount, account, accountNumber, logoUrl, date }) => (
             <OneTransaction
@@ -37,7 +53,7 @@ export default function Transactions() {
             />
           )
         )}
-      </ul>
+      </Box>
     </>
   );
 }
