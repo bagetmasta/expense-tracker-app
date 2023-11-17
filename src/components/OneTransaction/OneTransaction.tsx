@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardContent,
-  Typography,
-  Box,
-  Avatar,
-  Grid,
-} from "@mui/material";
+import { Card, CardContent, Typography, Avatar, Grid } from "@mui/material";
 import { Transaction } from "../../types/transaction";
 import nikeLogo from "../../images/nike.png";
 import pumaLogo from "../../images/puma.png";

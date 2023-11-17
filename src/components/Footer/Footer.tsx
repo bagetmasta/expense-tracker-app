@@ -42,9 +42,9 @@ export default function Footer() {
           <CardIcon color={value === "/expenses" ? "action" : "secondary"} />
         }
       />
-      <BottomNavigationAction value="add" icon={<AddIcon />} />
-      <BottomNavigationAction value="calendar" icon={<CalendarIcon />} />
-      <BottomNavigationAction value="settings" icon={<SettingsIcon />} />
+      <BottomNavigationAction icon={<AddIcon />} />
+      <BottomNavigationAction icon={<CalendarIcon />} />
+      <BottomNavigationAction icon={<SettingsIcon />} />
     </BottomNavigation>
   );
 }
