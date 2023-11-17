@@ -64,8 +64,8 @@ export default function OneTransactions({
               variant="subtitle1"
               color="#2BB272"
               fontSize={18}
-              fontWeight={500}
               lineHeight="normal"
+              fontWeight={500}
               mb={"8px"}
             >
               ${amount}
