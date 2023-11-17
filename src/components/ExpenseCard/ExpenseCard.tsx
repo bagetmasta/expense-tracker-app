@@ -131,7 +131,21 @@ export default function ExpenseCard() {
           <LinearProgress
             variant="determinate"
             value={data.progress}
-            sx={{ flexGrow: 1, height: "10px", borderRadius: "5px" }}
+            sx={{
+              flexGrow: 1,
+              height: "13px",
+              borderRadius: "5px",
+              backgroundColor: "transparent",
+              "& .MuiLinearProgress-bar": {
+                borderRadius: "5px",
+              },
+              "& .MuiLinearProgress-barColorPrimary": {
+                backgroundColor: "#8635F7",
+              },
+              "& .MuiLinearProgress-bar1Determinate": {
+                borderRadius: "5px",
+              },
+            }}
           />
         </Box>
       </CardContent>

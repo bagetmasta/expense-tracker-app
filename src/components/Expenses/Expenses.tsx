@@ -20,7 +20,7 @@ export default function Expenses() {
             lineHeight: "normal",
           }}
         >
-          Expences
+          Expenses
         </Typography>
         <Typography
           sx={{ color: "#A3A3A3", fontSize: "12px", lineHeight: "normal" }}
