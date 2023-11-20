@@ -53,7 +53,7 @@ export default function CreditCard() {
           fontWeight={700}
           lineHeight="normal"
         >
-          ${totalBalance}
+          ${totalBalance === "undefined.00" ? "****" : totalBalance}
         </Typography>
         <Box
           display="flex"

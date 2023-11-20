@@ -34,12 +34,12 @@ export default function Footer() {
     >
       <BottomNavigationAction
         value="/"
-        icon={<HomeIcon color={value === "/" ? "action" : "secondary"} />}
+        icon={<HomeIcon color={value === "/" ? "active" : "inactive"} />}
       />
       <BottomNavigationAction
         value="/expenses"
         icon={
-          <CardIcon color={value === "/expenses" ? "action" : "secondary"} />
+          <CardIcon color={value === "/expenses" ? "active" : "inactive"} />
         }
       />
       <BottomNavigationAction icon={<AddIcon />} />
