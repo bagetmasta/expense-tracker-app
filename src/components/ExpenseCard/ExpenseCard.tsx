@@ -26,6 +26,7 @@ export default function ExpenseCard() {
         overflow: "visible",
         backgroundColor: "#FAFAFA",
         boxShadow: "none",
+        marginBottom: "100px",
       }}
     >
       <CardContent>

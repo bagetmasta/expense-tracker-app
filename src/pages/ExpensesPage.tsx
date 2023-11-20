@@ -23,7 +23,7 @@ export default function ExpensesPage() {
     <>
       <h2>ExpensesPage</h2>
       <Calendar />
-      <Box display="flex" justifyContent="space-between" mt="100px">
+      <Box display="flex" justifyContent="space-between" mb="33px">
         <TotalBalance
           balance={totalBalance === "undefined.00" ? "****" : totalBalance}
           title={"Total Balance"}

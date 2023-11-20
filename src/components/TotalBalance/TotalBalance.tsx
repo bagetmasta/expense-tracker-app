@@ -25,7 +25,6 @@ const TotalBalance: React.FC<BalanceCardProps> = ({
       sx={{
         bgcolor: cardColor,
         borderRadius: "6px 6px 0 0",
-        mb: 2,
         boxShadow: "none",
       }}
     >
