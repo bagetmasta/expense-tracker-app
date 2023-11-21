@@ -11,12 +11,26 @@ import {
 import { Typography, FormControl, MenuItem, Box } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
+type DataType = {
+  month: string;
+};
+
 export default function Analytics() {
+  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const { data: analytics } = useGetAnalyticsQuery(selectedYear);
 
   const handleYearChange = (event: SelectChangeEvent<number>) => {
     setSelectedYear(Number(event.target.value));
+  };
+
+  const handleClick = (data: DataType) => {
+    const index = analytics?.monthlyData.findIndex(
+      (el: DataType) => el.month === data.month
+    );
+    if (typeof index === "number") {
+      setActiveIndex(index);
+    }
   };
 
   return (
@@ -91,19 +105,19 @@ export default function Analytics() {
           />
           <Bar
             dataKey="amount"
+            onClick={(data) => handleClick(data)}
             fill="#8234F8"
             barSize={31}
             radius={[6, 6, 0, 0]}
             background={{ fill: "none" }}
           >
-            {/* {
-              analytics?.monthlyData.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={entry.active ? "#8884d8" : "#eee"}
-                />
-              ))
-            } */}
+            {analytics?.monthlyData.map((_, index) => (
+              <Cell
+                cursor="pointer"
+                fill={index === activeIndex ? "#8234F8" : "#FAFAFA"}
+                key={`cell-${index}`}
+              />
+            ))}
           </Bar>
         </BarChart>
       </ResponsiveContainer>
