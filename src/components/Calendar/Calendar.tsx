@@ -84,6 +84,8 @@ const Calendar = () => {
               sx={{
                 minWidth: "36px",
                 minHeight: "36px",
+                position: "relative",
+                paddingBottom: "20px",
                 fontWeight:
                   selectedDate.getDate() === datesOfWeek[index].getDate() &&
                   selectedDate.getMonth() === datesOfWeek[index].getMonth()
@@ -105,6 +107,22 @@ const Calendar = () => {
                     selectedDate.getMonth() === datesOfWeek[index].getMonth()
                       ? "#FF643B"
                       : "transparent",
+                },
+                "&::after": {
+                  content: '""',
+                  position: "absolute",
+                  bottom: "8px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: "6px",
+                  height: "6px",
+                  borderRadius: "50%",
+                  backgroundColor:
+                    selectedDate.getDate() === datesOfWeek[index].getDate() &&
+                    selectedDate.getMonth() === datesOfWeek[index].getMonth()
+                      ? "#FFF"
+                      : "#A3A3A3",
+                  display: "block",
                 },
               }}
             >
