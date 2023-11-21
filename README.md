@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Project Description: Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Expense Tracker project is a React-based application tailored for personal financial management. It allows users to efficiently track and categorize their income and expenses. The app features two main pages: a 'Home' page, which displays an overview of the user's financial status including total balance, analytics of spending over time, and recent transactions, and an 'Expenses' page, which provides a detailed view of expenses filtered by date. Users can interact with a sleek calendar interface to select dates and view corresponding transactions.
 
-## Available Scripts
+The Home page showcases an analytics section with a graphical representation of expenses distributed over months, which users can filter by year. The intuitive interface also includes a list of recent transactions, providing quick access to the latest financial activities. The Expenses page is dedicated to managing and reviewing expenditures, offering a comprehensive look at where and how users are spending their money.
 
-In the project directory, you can run:
+The application leverages React for dynamic user interfaces, Material UI (MUI) for modern and responsive component design, and TypeScript for robust typing and reduced likelihood of runtime errors. While optional, Redux is integrated for global state management, providing a predictable state container across the app. React Router is employed for seamless navigation between the Home and Expenses pages without page reloads, enhancing the user experience with fast and stateful page transitions.
 
-### `npm start`
+Each user interaction with the financial data is thoughtfully designed to be engaging, providing immediate visual feedback that enhances the overall experience. The project is structured to meet best practices with a logical folder hierarchy, a clear GIT history of commits, and adherence to linting rules. The project is initialized with a popular starter like Create React App, ensuring a standardized setup and build process. This Expense Tracker app stands as a testament to clean code, user-centered design, and the power of React in building interactive web applications.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To initialize and locally run the project, follow these steps:
 
-### `npm test`
+1. npm i
+2. npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# React homework template
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was created using
+[Create React App](https://github.com/facebook/create-react-app). To learn more
+about the setup and configuration of additional features, please refer to the
+[documentation](https://facebook.github.io/create-react-app/docs/getting-started).
