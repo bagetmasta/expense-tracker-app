@@ -13,11 +13,11 @@ export default function CreditCard() {
   const totalBalance = formatBalance(balance?.totalBalance);
 
   return (
-    <Card variant="outlined" sx={{ border: 0, marginTop: "90px", mb: "36px" }}>
+    <Card variant="outlined" sx={{ border: 0, marginTop: "110px", mb: "36px" }}>
       <Box
         sx={{
           position: "absolute",
-          top: 70,
+          top: 85,
           left: "50%",
           transform: "translateX(-50%)",
           width: "80%",

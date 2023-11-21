@@ -6,16 +6,11 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
+  ResponsiveContainer,
   Tooltip,
   Legend,
 } from "recharts";
-import {
-  Typography,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Box,
-} from "@mui/material";
+import { Typography, FormControl, MenuItem, Box } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 export default function Analytics() {
@@ -46,21 +41,33 @@ export default function Analytics() {
         >
           Analytics
         </Typography>
-        <FormControl variant="outlined" size="small" sx={{ minWidth: 120 }}>
-          <InputLabel id="year-select-label">Year</InputLabel>
+        <FormControl
+          variant="filled"
+          size="small"
+          sx={{
+            minWidth: 120,
+            borderRadius: "12px",
+            backgroundColor: "#FF653A",
+          }}
+        >
           <Select
             labelId="year-select-label"
             id="year-select"
             value={selectedYear}
             onChange={handleYearChange}
             label="Year"
+            sx={{
+              backgroundColor: "transparent",
+              color: "#FFF",
+              fontSize: "13px",
+            }}
           >
-            <MenuItem value={2023}>2023</MenuItem>
-            <MenuItem value={2022}>2022</MenuItem>
+            <MenuItem value={2023}>Year - 2023</MenuItem>
+            <MenuItem value={2022}>Year - 2022</MenuItem>
           </Select>
         </FormControl>
       </Box>
-      <Box sx={{ mb: "32px" }}>
+      <ResponsiveContainer width="100%" minHeight={300}>
         <BarChart
           width={500}
           height={300}
@@ -84,7 +91,7 @@ export default function Analytics() {
           <CartesianGrid strokeDasharray="3 3" />
           <Bar dataKey="amount" fill="#8884d8" background={{ fill: "#eee" }} />
         </BarChart>
-      </Box>
+      </ResponsiveContainer>
     </>
   );
 }

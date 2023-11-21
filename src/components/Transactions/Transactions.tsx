@@ -8,8 +8,6 @@ export default function Transactions() {
     data: Transaction[];
   };
 
-  console.log(transactions);
-
   return (
     <>
       <Box
@@ -38,7 +36,7 @@ export default function Transactions() {
       </Box>
       <Box
         component="ul"
-        sx={{ listStyle: "none", padding: 0, marginBottom: "80px" }}
+        sx={{ listStyle: "none", padding: 0, marginBottom: "100px" }}
       >
         {transactions?.map(
           ({ id, name, amount, account, accountNumber, logoUrl, date }) => (

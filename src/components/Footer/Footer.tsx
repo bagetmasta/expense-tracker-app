@@ -22,6 +22,7 @@ export default function Footer() {
   };
   return (
     <BottomNavigation
+      component="footer"
       value={value}
       onChange={handleChange}
       showLabels
@@ -30,6 +31,7 @@ export default function Footer() {
         bottom: 0,
         boxShadow: "0px 0px 4px 0px rgba(0, 0, 0, 0.09)",
         position: "fixed",
+        padding: "10px 0px",
       }}
     >
       <BottomNavigationAction

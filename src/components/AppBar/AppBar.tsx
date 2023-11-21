@@ -41,7 +41,13 @@ export default function AppBar() {
         }}
       >
         <Container>
-          <Toolbar sx={{ justifyContent: "space-evenly" }}>
+          <Toolbar
+            sx={{
+              justifyContent: "space-evenly",
+              maxWidth: "900px",
+              margin: "auto",
+            }}
+          >
             <Box
               sx={{
                 width: 36,
@@ -86,11 +92,11 @@ export default function AppBar() {
           </Box>
         }
       >
-        <Container maxWidth="sm">
-          <main>
+        <main>
+          <Container maxWidth="sm">
             <Outlet />
-          </main>
-        </Container>
+          </Container>
+        </main>
         <Footer />
       </Suspense>
     </>

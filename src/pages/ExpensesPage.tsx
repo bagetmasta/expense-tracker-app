@@ -11,8 +11,6 @@ export default function ExpensesPage() {
   const { data: balance } = useGetBalanceQuery();
   const { data: transactions } = useGetTransactionsQuery();
 
-  console.log(transactions);
-
   function formatBalance(money: number | undefined) {
     return money?.toFixed(2).replace(".", ",") + ".00";
   }
@@ -21,7 +19,6 @@ export default function ExpensesPage() {
 
   return (
     <>
-      <h2>ExpensesPage</h2>
       <Calendar />
       <Box display="flex" justifyContent="space-between" mb="33px">
         <TotalBalance

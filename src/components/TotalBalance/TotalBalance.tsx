@@ -56,7 +56,7 @@ const TotalBalance: React.FC<BalanceCardProps> = ({
         sx={{
           backgroundColor: "#FAFAFA",
           borderRadius: "10px 10px 0 0",
-          padding: "5px",
+          padding: "8px",
         }}
       >
         <CardIcon color={bankAccontColor} />
