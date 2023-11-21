@@ -79,46 +79,52 @@ export default function Analytics() {
           </Select>
         </FormControl>
       </Box>
-      <ResponsiveContainer width="100%" minHeight={300}>
-        <BarChart
-          data={analytics?.monthlyData}
-          margin={{
-            top: 20,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <XAxis
-            dataKey="month"
-            tick={{ fill: "#A3A3A3" }}
-            axisLine={false}
-            tickLine={false}
-          />
-          <Bar
-            dataKey="amount"
-            onClick={(data) => handleClick(data)}
-            fill="#8234F8"
-            barSize={31}
-            radius={[6, 6, 0, 0]}
-            background={{ fill: "none" }}
+      <Box
+        sx={{
+          mb: "32px",
+        }}
+      >
+        <ResponsiveContainer width="100%" minHeight={300}>
+          <BarChart
+            data={analytics?.monthlyData}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
           >
-            <LabelList
-              dataKey="amount"
-              position="top"
-              fill="#A3A3A3"
-              formatter={(value: string) => `$${value}`}
+            <XAxis
+              dataKey="month"
+              tick={{ fill: "#A3A3A3" }}
+              axisLine={false}
+              tickLine={false}
             />
-            {analytics?.monthlyData.map((_, index) => (
-              <Cell
-                cursor="pointer"
-                fill={index === activeIndex ? "#8234F8" : "#FAFAFA"}
-                key={`cell-${index}`}
+            <Bar
+              dataKey="amount"
+              onClick={(data) => handleClick(data)}
+              fill="#8234F8"
+              barSize={31}
+              radius={[6, 6, 0, 0]}
+              background={{ fill: "none" }}
+            >
+              <LabelList
+                dataKey="amount"
+                position="top"
+                fill="#A3A3A3"
+                formatter={(value: string) => `$${value}`}
               />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
+              {analytics?.monthlyData.map((_, index) => (
+                <Cell
+                  cursor="pointer"
+                  fill={index === activeIndex ? "#8234F8" : "#FAFAFA"}
+                  key={`cell-${index}`}
+                />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </Box>
     </>
   );
 }
