@@ -5,7 +5,6 @@ import {
   Bar,
   XAxis,
   ResponsiveContainer,
-  Tooltip,
   Cell,
   LabelList,
 } from "recharts";
