@@ -7,6 +7,7 @@ import {
   ResponsiveContainer,
   Tooltip,
   Cell,
+  LabelList,
 } from "recharts";
 import { Typography, FormControl, MenuItem, Box } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -91,17 +92,9 @@ export default function Analytics() {
         >
           <XAxis
             dataKey="month"
-            tick={{ fill: "gray" }}
+            tick={{ fill: "#A3A3A3" }}
             axisLine={false}
             tickLine={false}
-          />
-          <Tooltip
-            cursor={{ fill: "transparent" }}
-            contentStyle={{
-              backgroundColor: "#fff",
-              borderColor: "#ddd",
-            }}
-            itemStyle={{ color: "#8884d8" }}
           />
           <Bar
             dataKey="amount"
@@ -111,6 +104,12 @@ export default function Analytics() {
             radius={[6, 6, 0, 0]}
             background={{ fill: "none" }}
           >
+            <LabelList
+              dataKey="amount"
+              position="top"
+              fill="#A3A3A3"
+              formatter={(value: string) => `$${value}`}
+            />
             {analytics?.monthlyData.map((_, index) => (
               <Cell
                 cursor="pointer"
