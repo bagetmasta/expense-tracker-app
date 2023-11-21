@@ -4,11 +4,9 @@ import {
   BarChart,
   Bar,
   XAxis,
-  YAxis,
-  CartesianGrid,
   ResponsiveContainer,
   Tooltip,
-  Legend,
+  Cell,
 } from "recharts";
 import { Typography, FormControl, MenuItem, Box } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -69,27 +67,44 @@ export default function Analytics() {
       </Box>
       <ResponsiveContainer width="100%" minHeight={300}>
         <BarChart
-          width={500}
-          height={300}
           data={analytics?.monthlyData}
           margin={{
-            top: 5,
+            top: 20,
             right: 30,
             left: 20,
             bottom: 5,
           }}
-          barSize={20}
         >
           <XAxis
             dataKey="month"
-            scale="point"
-            padding={{ left: 10, right: 10 }}
+            tick={{ fill: "gray" }}
+            axisLine={false}
+            tickLine={false}
           />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <CartesianGrid strokeDasharray="3 3" />
-          <Bar dataKey="amount" fill="#8884d8" background={{ fill: "#eee" }} />
+          <Tooltip
+            cursor={{ fill: "transparent" }}
+            contentStyle={{
+              backgroundColor: "#fff",
+              borderColor: "#ddd",
+            }}
+            itemStyle={{ color: "#8884d8" }}
+          />
+          <Bar
+            dataKey="amount"
+            fill="#8234F8"
+            barSize={31}
+            radius={[6, 6, 0, 0]}
+            background={{ fill: "none" }}
+          >
+            {/* {
+              analytics?.monthlyData.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={entry.active ? "#8884d8" : "#eee"}
+                />
+              ))
+            } */}
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     </>
