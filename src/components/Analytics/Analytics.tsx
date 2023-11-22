@@ -10,6 +10,7 @@ import {
 } from "recharts";
 import { Typography, FormControl, MenuItem, Box } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { RenderCustomizedLabel } from "../CustomTick/CustomTick";
 
 type DataType = {
   month: string;
@@ -111,10 +112,32 @@ export default function Analytics() {
               <LabelList
                 dataKey="amount"
                 position="top"
-                fill="#A3A3A3"
-                formatter={(value: string) => `$${value}`}
+                content={(props) => {
+                  const { x, y, width, value, index } =
+                    props as typeof props & { index: number };
+
+                  if (
+                    x === undefined ||
+                    y === undefined ||
+                    width === undefined ||
+                    value === undefined
+                  ) {
+                    return null;
+                  }
+
+                  return (
+                    <RenderCustomizedLabel
+                      x={x}
+                      y={y}
+                      width={width}
+                      value={value}
+                      index={index}
+                      activeIndex={activeIndex}
+                    />
+                  );
+                }}
               />
-              {analytics?.monthlyData.map((_, index) => (
+              {analytics?.monthlyData.map((_, index: number) => (
                 <Cell
                   cursor="pointer"
                   fill={index === activeIndex ? "#8234F8" : "#FAFAFA"}
