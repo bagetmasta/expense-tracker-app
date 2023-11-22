@@ -32,6 +32,7 @@ export const RenderCustomizedLabel: React.FC<CustomLabelProps> = ({
       fill={isActive ? "#8234F8" : "#A3A3A3"}
       textAnchor="middle"
       dy={-10}
+      style={{ fontSize: 12 }}
     >
       {formattedValue}
     </Text>
