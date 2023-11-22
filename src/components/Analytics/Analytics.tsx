@@ -10,7 +10,7 @@ import {
 } from "recharts";
 import { Typography, FormControl, MenuItem, Box } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { RenderCustomizedLabel } from "../CustomTick/CustomTick";
+import { RenderCustomizedLabel } from "../CustomLabel/CustomLabel";
 
 type DataType = {
   month: string;
